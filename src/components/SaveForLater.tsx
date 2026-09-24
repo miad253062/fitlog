@@ -18,7 +18,7 @@ function SaveForLater ({clickedData}: ClickedDataProp) {
         const exist: FitlogType | undefined = saveforlater.find(data => data.id === clickedData.id)
         if(!exist){
             setSaveforlater([...saveforlater, clickedData])
-            toast.success(`${clickedData.name} added`)
+            toast.success(`${clickedData.name} saved`)
         }else{
             toast.error(`${clickedData.name} already in list`)
         }

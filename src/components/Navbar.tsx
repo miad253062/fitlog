@@ -10,8 +10,8 @@ function Navbar() {
   const {todaylist, saveforlater} = useContext(FitContext)
   const pathname = usePathname()
   return (
-    <div className="border-b border-gray-700">
-      <div className="container mx-auto">
+    <div className="border-b border-gray-700 sticky top-0 z-50 bg-gray-900">
+      <div className="container mx-auto ">
         <nav className="flex justify-between items-center p-4">
           <Link href={"/"} className="flex items-center gap-2">
             <Image src={NavLogo} alt="Nav logo" height={30} width={30}></Image>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <div className="border-b border-gray-500">
+    <div className="border-b border-gray-700">
       <div className="container mx-auto">
         <nav className="flex justify-between items-center p-4">
           <Link href={"/"} className="flex items-center gap-2">

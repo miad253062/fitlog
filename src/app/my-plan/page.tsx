@@ -1,5 +1,6 @@
 "use client";
 import FilterSection from "@/components/FilterSection";
+import SaveCards from "@/components/SaveCards";
 import TodayCards from "@/components/TodayCards";
 import { FitContext } from "@/context/FitContext";
 import Link from "next/link";
@@ -64,7 +65,8 @@ function Myplan() {
             </Link>
           </div>
         ) : (
-          <TodayCards />
+            (activeTab === 'today')? <TodayCards /> : <SaveCards/>
+          
         )}
       </div>
     </div>

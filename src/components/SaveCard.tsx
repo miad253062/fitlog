@@ -2,35 +2,23 @@ import { FitContext } from "@/context/FitContext";
 import { FitlogType } from "@/types/type";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FaFire, FaStar } from "react-icons/fa";
-import { GiCheckMark } from "react-icons/gi";
 import { IoTimer } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { toast } from "react-toastify";
 
-function TodayCard ({todayData}: {todayData: FitlogType}) {
-    const [isSelected, setIsSelected] = useState<boolean>(false)
-    const {todaylist, setTodaylist} = useContext(FitContext)
-    const exist: FitlogType | undefined = todaylist.find(f => f.id === todayData.id)
+function SaveCard ({todayData}: {todayData: FitlogType}) {
+    const {saveforlater, setSaveforlater} = useContext(FitContext)
+    const exist: FitlogType | undefined = saveforlater.find(f => f.id === todayData.id)
     const handleDelete = () => {
         if(exist){
-            const remaining: FitlogType[] = todaylist.filter(f => f.id !== todayData.id)
-            setTodaylist(remaining)
+            const remaining: FitlogType[] = saveforlater.filter(f => f.id !== todayData.id)
+            setSaveforlater(remaining)
             toast.error(`${todayData.name} deleted!`)
         }else{
             toast.error(`${todayData.name} not found!`)
         }
-    }
-
-    const handleMarkAsDone = () => {
-        setIsSelected(!isSelected)
-        if(isSelected){
-            toast.success('Mark as undone.')
-        }else{
-            toast.success('Mark as done.')
-        }
-        
     }
     return (
         <div>
@@ -50,7 +38,6 @@ function TodayCard ({todayData}: {todayData: FitlogType}) {
                 
                 <div className="flex items-center gap-4">
                     <Link href={`/workouts/${todayData.id}`} className="px-4 py-2 rounded-2xl border border-gray-500">View Details</Link>
-                    <button  className="flex items-center px-4 py-2 cursor-pointer rounded-2xl bg-[#d0fe00] text-black" onClick={handleMarkAsDone}><GiCheckMark />{`${isSelected? 'Done': 'Mark as Done'}`}</button>
                     <button onClick={handleDelete}  className="text-2xl hover:text-red-500 cursor-pointer"><RxCross2 /></button>
                 </div>
             </div>
@@ -58,4 +45,4 @@ function TodayCard ({todayData}: {todayData: FitlogType}) {
     )
 }
 
-export default TodayCard
+export default SaveCard

@@ -16,7 +16,7 @@ const getData = async () => {
 async function Cards () {
     const fitdata: FitlogType[] = await getData()
     return (
-        <div className="container mx-auto p-4 space-y-4 mt-10">
+        <div className="container mx-auto p-4 space-y-4 mt-10" id="library">
             <div>
                 <h1 className="text-3xl font-bold">THE LIBRARY</h1>
                 <p className="text-xl text-gray-500">Twelve lifts covering every major muscle group.</p>

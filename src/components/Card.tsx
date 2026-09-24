@@ -12,7 +12,7 @@ function Card ({fitdata}: FitProps) {
     
     return (
         <div className="rounded-2xl bg-[#15161d] hover:scale-102 duration-300 hover:border-2 hover:border-lime-500">
-            <Link href={'#'}>
+            <Link href={`/workouts/${fitdata.id}`}>
                 <div>
                     <Image src={fitdata.image} alt={fitdata.name} height={500} width={500} className="mx-auto rounded-t-2xl"></Image>
                     <div className="p-4 space-y-4">

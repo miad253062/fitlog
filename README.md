@@ -4,6 +4,7 @@
 FitLog is a dark, no-nonsense gym companion application built for fitness enthusiasts. It allows users to browse a library of workouts, view detailed instructions, and seamlessly lock selected exercises into their "Today's Plan" or save them for later. The app provides a highly interactive experience with live metrics tracking and dynamic UI updates to watch the week's work add up.
 
 ## Live Link: https://assignment06-fitlog.vercel.app/
+
 ## 🛠️ Technologies Used
 *   **Framework:** Next.js
 *   **Language:** TypeScript

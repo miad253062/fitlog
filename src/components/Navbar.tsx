@@ -15,7 +15,7 @@ function Navbar() {
         <nav className="flex justify-between items-center p-4">
           <Link href={"/"} className="flex items-center gap-2">
             <Image src={NavLogo} alt="Nav logo" height={30} width={30}></Image>
-            <h1 className="text-2xl font-extrabold">FITLOG</h1>
+            <h1 className="hidden md:block text-2xl font-extrabold font-oswald">FITLOG</h1>
           </Link>
 
           <div className="flex gap-2">

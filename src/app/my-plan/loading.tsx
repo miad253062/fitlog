@@ -2,7 +2,7 @@ function Loading () {
     return (
         <div className="mt-10">
             <h1 className="text-center text-3xl min-h-full">
-                <span className="loading loading-spinner text-success"></span>
+                Loading workouts...
             </h1>
         </div>
     )

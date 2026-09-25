@@ -21,7 +21,7 @@ function Card ({fitdata}: FitProps) {
                                 fitdata.muscleGroups.map((mg, index) => <span className="px-2 py-1 rounded-2xl text-black bg-lime-400 mr-2 font-bold" key={index}>{mg}</span>)
                             }
                         </p>
-                        <h1 className="text-2xl font-bold">{fitdata.name}</h1>
+                        <h1 className="text-2xl font-bold font-oswald">{fitdata.name}</h1>
                         <p>
                             {
                                 fitdata.equipment

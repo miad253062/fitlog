@@ -18,7 +18,7 @@ async function Cards () {
     return (
         <div className="container mx-auto p-4 space-y-4 mt-10" id="library">
             <div>
-                <h1 className="text-3xl font-bold">THE LIBRARY</h1>
+                <h1 className="text-3xl font-bold font-oswald">THE LIBRARY</h1>
                 <p className="text-xl text-gray-500">Twelve lifts covering every major muscle group.</p>
             </div>
             <div className="h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 justify-center items-center">

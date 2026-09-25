@@ -34,11 +34,11 @@ function TodayCard ({todayData}: {todayData: FitlogType}) {
     }
     return (
         <div>
-            <div className="flex flex-wrap gap-2 justify-between items-center p-4 m-3 bg-gray-700 rounded-2xl">
+            <div className="flex flex-wrap gap-2 justify-between items-center p-4 m-3 bg-slate-800 border border-gray-500 rounded-2xl">
                 <div className="flex items-center gap-4">
                     <Image src={todayData.image} alt={todayData.name} width={100} height={100} className="rounded-2xl"></Image>
-                    <div>
-                        <h1 className="text-2xl font-bold">{todayData.name}</h1>
+                    <div className="space-y-1">
+                        <h1 className="text-3xl font-bold font-oswald">{todayData.name}</h1>
                         <p>{todayData.equipment}</p>
                         <div className="flex items-center gap-2">
                             <p className="flex items-center gap-1"><IoTimer className="text-[#d0fe00]" /> {todayData.duration} min</p>
@@ -49,8 +49,8 @@ function TodayCard ({todayData}: {todayData: FitlogType}) {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                    <Link href={`/workouts/${todayData.id}`} className="px-4 py-2 rounded-2xl border border-gray-500">View Details</Link>
-                    <button  className="flex items-center px-4 py-2 cursor-pointer rounded-2xl bg-[#d0fe00] text-black" onClick={handleMarkAsDone}><GiCheckMark />{`${isSelected? 'Done': 'Mark as Done'}`}</button>
+                    <Link href={`/workouts/${todayData.id}`} className="px-4 py-2 rounded-4xl border border-gray-500">View Details</Link>
+                    <button  className="flex items-center px-4 py-2 cursor-pointer rounded-4xl bg-[#d0fe00] text-black" onClick={handleMarkAsDone}><GiCheckMark />{`${isSelected? 'Done': 'Mark as Done'}`}</button>
                     <button onClick={handleDelete}  className="text-2xl hover:text-red-500 cursor-pointer"><RxCross2 /></button>
                 </div>
             </div>

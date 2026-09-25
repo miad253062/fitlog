@@ -22,11 +22,11 @@ function SaveCard ({saveData}: {saveData: FitlogType}) {
     }
     return (
         <div>
-            <div className="flex flex-wrap gap-2 justify-between items-center p-4 m-3 bg-gray-700 rounded-2xl">
+            <div className="flex flex-wrap gap-2 justify-between items-center p-4 m-3  bg-slate-800 border border-gray-500 rounded-2xl">
                 <div className="flex items-center gap-4">
                     <Image src={saveData.image} alt={saveData.name} width={100} height={100} className="rounded-2xl"></Image>
-                    <div>
-                        <h1 className="text-2xl font-bold">{saveData.name}</h1>
+                    <div className="space-y-1">
+                        <h1 className="text-3xl font-bold font-oswald">{saveData.name}</h1>
                         <p>{saveData.equipment}</p>
                         <div className="flex items-center gap-2">
                             <p className="flex items-center gap-1"><IoTimer className="text-[#d0fe00]" /> {saveData.duration} min</p>
@@ -37,7 +37,7 @@ function SaveCard ({saveData}: {saveData: FitlogType}) {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                    <Link href={`/workouts/${saveData.id}`} className="px-4 py-2 rounded-2xl border border-gray-500">View Details</Link>
+                    <Link href={`/workouts/${saveData.id}`} className="px-4 py-2 rounded-4xl border border-gray-500">View Details</Link>
                     <button onClick={handleDelete}  className="text-2xl hover:text-red-500 cursor-pointer"><RxCross2 /></button>
                 </div>
             </div>

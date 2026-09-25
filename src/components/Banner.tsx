@@ -5,7 +5,7 @@ import Link from "next/link";
 function Banner () {
     return (
         <section className="container mx-auto p-2">
-            <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 px-20 py-10 bg-[#15161d] mt-15 rounded-2xl h-fit">
+            <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 px-10 py-5 md:px-20 md:py-10 bg-[#15161d] mt-15 rounded-2xl h-fit">
                 <div className="space-y-4 md:col-span-2">
                     <p className="text-lime-400 font-bold">WORKOUT LIBRARY</p>
                     <h1 className="font-bold text-4xl md:text-7xl font-oswald">TRAIN WITH INTENT. LOG EVERY SET.</h1>

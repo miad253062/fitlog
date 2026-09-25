@@ -19,10 +19,10 @@ function Navbar() {
           </Link>
 
           <div className="flex gap-2">
-            <Link href={"/"} className={`px-3 py-2 font-bold rounded-3xl ${pathname === '/' && 'text-[#ccff00] bg-[#1b4112]'}`}>Workouts</Link>
+            <Link href={"/"} className={`px-2 py-1 md:px-3 md:py-2 font-bold rounded-3xl ${pathname === '/' && 'text-[#ccff00] bg-[#1b4112]'}`}>Workouts</Link>
             <Link
               href={"/my-plan"}
-              className={`px-3 py-2 font-bold rounded-3xl ${pathname ==='/my-plan' && 'text-[#ccff00] bg-[#1b4112]'}`}
+              className={`px-2 py-1 md:px-3 md:py-2 font-bold rounded-3xl ${pathname ==='/my-plan' && 'text-[#ccff00] bg-[#1b4112]'}`}
             >
               My Plan
             </Link>
